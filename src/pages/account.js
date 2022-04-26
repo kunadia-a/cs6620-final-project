@@ -8,7 +8,9 @@ const Account = () => (
   <>
     <Head>
       <title>
-        Account | Material Kit
+        {/* Account | Material Kit */}        
+        About | Material Kit
+
       </title>
     </Head>
     <Box
@@ -23,7 +25,9 @@ const Account = () => (
           sx={{ mb: 3 }}
           variant="h4"
         >
-          Account
+         About
+
+          {/* Account */}
         </Typography>
         <Grid
           container

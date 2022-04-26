@@ -1,5 +1,7 @@
 import { Avatar, Box, Card, CardContent, Grid, LinearProgress, Typography } from '@mui/material';
 import InsertChartIcon from '@mui/icons-material/InsertChartOutlined';
+import NationalDebtAPI from 'src/API/nationalDebtAPI';
+import DateRangeIcon from '@mui/icons-material/DateRange';
 
 export const TasksProgress = (props) => (
   <Card
@@ -13,22 +15,31 @@ export const TasksProgress = (props) => (
         sx={{ justifyContent: 'space-between' }}
       >
         <Grid item>
+
           <Typography
             color="textSecondary"
             gutterBottom
             variant="overline"
           >
-            TASKS PROGRESS
+            National Debt
           </Typography>
           <Typography
             color="textPrimary"
-            variant="h4"
+            variant="h6"
           >
-            75.5%
+        <Box
+          sx={{
+           alignItems: 'center',
+            display: 'flex',
+            pt: 2
+          }}
+        >
+          <NationalDebtAPI displayData={"nationalDebt"}/>
+          </Box>
           </Typography>
         </Grid>
         <Grid item>
-          <Avatar
+          {/* <Avatar
             sx={{
               backgroundColor: 'warning.main',
               height: 56,
@@ -36,15 +47,40 @@ export const TasksProgress = (props) => (
             }}
           >
             <InsertChartIcon />
-          </Avatar>
+          </Avatar> */}
         </Grid>
       </Grid>
-      <Box sx={{ pt: 3 }}>
-        <LinearProgress
-          value={75.5}
-          variant="determinate"
-        />
-      </Box>
+      <Box
+        sx={{
+          alignItems: 'center',
+          display: 'flex',
+          pt: 3
+        }}
+      >
+        <Typography
+          color="textSecondary"
+          variant="caption"
+        >
+          National Debt Publish Date
+        </Typography>
+        </Box>
+        <Box
+           sx={{
+            alignItems: 'center',
+            display: 'flex',
+            pt: 2
+          }}
+        >
+        <DateRangeIcon />
+        <Typography
+          variant="caption"
+          sx={{
+            mr: 1
+          }}
+        >
+          <NationalDebtAPI displayData={"recordDate"}/>
+        </Typography>
+     </Box>
     </CardContent>
   </Card>
 );

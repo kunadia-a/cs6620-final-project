@@ -49,7 +49,7 @@ const InterestRateAPI = (props) => {
     } else {
         console.log("interest rate received");
         if (props.displayData === "interestRate") {
-            return interestRate.rate + " %";
+            return interestRate.rate + "%";
         }
         if (props.displayData === "recordDate") {
             return interestRate.date;

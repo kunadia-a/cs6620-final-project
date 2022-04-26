@@ -21,7 +21,19 @@ const user = {
 export const AccountProfile = (props) => (
   <Card {...props}>
     <CardContent>
-      <Box
+      <div>
+      Christopher Holzheu
+      </div>
+      <div>
+      Ankita Kunadia
+      </div>
+      <div>
+      Katie Han
+      </div>
+      <div>
+      Chance Lamberth
+      </div>
+      {/* <Box
         sx={{
           alignItems: 'center',
           display: 'flex',
@@ -55,17 +67,17 @@ export const AccountProfile = (props) => (
         >
           {user.timezone}
         </Typography>
-      </Box>
+      </Box> */}
     </CardContent>
     <Divider />
     <CardActions>
-      <Button
+      {/* <Button
         color="primary"
         fullWidth
         variant="text"
       >
         Upload picture
-      </Button>
+      </Button> */}
     </CardActions>
   </Card>
 );

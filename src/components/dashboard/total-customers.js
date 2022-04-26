@@ -5,7 +5,9 @@ import PeopleIcon from '@mui/icons-material/PeopleOutlined';
 import InterestRateAPI from 'src/API/interestRateAPI';
 
 export const TotalCustomers = (props) => (
-  <Card {...props}>
+  <Card 
+  sx={{ height: '100%' }}
+  {...props}>
     <CardContent>
       <Grid
         container
@@ -28,7 +30,7 @@ export const TotalCustomers = (props) => (
           </Typography>
         </Grid>
         <Grid item>
-          <Avatar
+          {/* <Avatar
             sx={{
               backgroundColor: 'success.main',
               height: 56,
@@ -36,7 +38,7 @@ export const TotalCustomers = (props) => (
             }}
           >
             <PeopleIcon />
-          </Avatar>
+          </Avatar> */}
         </Grid>
       </Grid>
       <Box
@@ -46,22 +48,30 @@ export const TotalCustomers = (props) => (
           pt: 2
         }}
       >
-        <DateRangeIcon />
-        <Typography
-          variant="body2"
-          sx={{
-            mr: 1
-          }}
-        >
-          <InterestRateAPI displayData={"recordDate"}/>
-        </Typography>
         <Typography
           color="textSecondary"
           variant="caption"
         >
           Interest Rate Publish Date
         </Typography>
-      </Box>
+        </Box>
+        <Box
+           sx={{
+            alignItems: 'center',
+            display: 'flex',
+            pt: 2
+          }}
+        >
+        <DateRangeIcon />
+        <Typography
+          variant="caption"
+          sx={{
+            mr: 1
+          }}
+        >
+          <InterestRateAPI displayData={"recordDate"}/>
+        </Typography>
+     </Box>
     </CardContent>
   </Card>
 );

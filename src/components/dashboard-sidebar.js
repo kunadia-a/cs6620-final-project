@@ -20,43 +20,43 @@ const items = [
   {
     href: '/',
     icon: (<ChartBarIcon fontSize="small" />),
-    title: 'Dashboard'
+    title: 'Financial Dashboard'
   },
-  {
-    href: '/customers',
-    icon: (<UsersIcon fontSize="small" />),
-    title: 'Customers'
-  },
-  {
-    href: '/products',
-    icon: (<ShoppingBagIcon fontSize="small" />),
-    title: 'Products'
-  },
+  // {
+  //   href: '/customers',
+  //   icon: (<UsersIcon fontSize="small" />),
+  //   title: 'Customers'
+  // },
+  // {
+  //   href: '/products',
+  //   icon: (<ShoppingBagIcon fontSize="small" />),
+  //   title: 'Products'
+  // },
   {
     href: '/account',
     icon: (<UserIcon fontSize="small" />),
-    title: 'Account'
+    title: 'About'
   },
-  {
-    href: '/settings',
-    icon: (<CogIcon fontSize="small" />),
-    title: 'Settings'
-  },
-  {
-    href: '/login',
-    icon: (<LockIcon fontSize="small" />),
-    title: 'Login'
-  },
-  {
-    href: '/register',
-    icon: (<UserAddIcon fontSize="small" />),
-    title: 'Register'
-  },
-  {
-    href: '/404',
-    icon: (<XCircleIcon fontSize="small" />),
-    title: 'Error'
-  }
+  // {
+  //   href: '/settings',
+  //   icon: (<CogIcon fontSize="small" />),
+  //   title: 'Settings'
+  // },
+  // {
+  //   href: '/login',
+  //   icon: (<LockIcon fontSize="small" />),
+  //   title: 'Login'
+  // },
+  // {
+  //   href: '/register',
+  //   icon: (<UserAddIcon fontSize="small" />),
+  //   title: 'Register'
+  // },
+  //{
+  //   href: '/404',
+  //   icon: (<XCircleIcon fontSize="small" />),
+  //   title: 'Error'
+  // }
 ];
 
 export const DashboardSidebar = (props) => {
@@ -92,7 +92,7 @@ export const DashboardSidebar = (props) => {
       >
         <div>
           <Box sx={{ p: 3 }}>
-            <NextLink
+            {/* <NextLink
               href="/"
               passHref
             >
@@ -104,11 +104,11 @@ export const DashboardSidebar = (props) => {
                   }}
                 />
               </a>
-            </NextLink>
+            </NextLink> */}
           </Box>
-          <Box sx={{ px: 2 }}>
-            <Box
-              sx={{
+          {/* <Box sx={{ px: 2 }}> */}
+            {/* <Box */}
+              {/* sx={{
                 alignItems: 'center',
                 backgroundColor: 'rgba(255, 255, 255, 0.04)',
                 cursor: 'pointer',
@@ -118,32 +118,32 @@ export const DashboardSidebar = (props) => {
                 py: '11px',
                 borderRadius: 1
               }}
-            >
-              <div>
-                <Typography
+            > */}
+              {/* <div> */}
+                {/* <Typography
                   color="inherit"
                   variant="subtitle1"
                 >
                   Acme Inc
-                </Typography>
-                <Typography
+                </Typography> */}
+                {/* <Typography
                   color="neutral.400"
                   variant="body2"
                 >
                   Your tier
                   {' '}
                   : Premium
-                </Typography>
-              </div>
-              <SelectorIcon
+                </Typography> */}
+              {/* </div> */}
+              {/* <SelectorIcon
                 sx={{
                   color: 'neutral.500',
                   width: 14,
                   height: 14
                 }}
-              />
-            </Box>
-          </Box>
+              /> */}
+            {/* </Box> */}
+          {/* </Box> */}
         </div>
         <Divider
           sx={{
@@ -168,19 +168,19 @@ export const DashboardSidebar = (props) => {
             py: 3
           }}
         >
-          <Typography
+          {/* <Typography
             color="neutral.100"
             variant="subtitle2"
           >
             Need more features?
-          </Typography>
-          <Typography
+          </Typography> */}
+          {/* <Typography
             color="neutral.500"
             variant="body2"
           >
             Check out our Pro solution template.
-          </Typography>
-          <Box
+          </Typography> */}
+          {/* <Box
             sx={{
               display: 'flex',
               mt: 2,
@@ -195,8 +195,8 @@ export const DashboardSidebar = (props) => {
               alt="Go to pro"
               src="/static/images/sidebar_pro.png"
             />
-          </Box>
-          <NextLink
+          </Box> */}
+          {/* <NextLink
             href="https://material-kit-pro-react.devias.io/"
             passHref
           >
@@ -210,7 +210,7 @@ export const DashboardSidebar = (props) => {
             >
               Pro Live Preview
             </Button>
-          </NextLink>
+          </NextLink> */}
         </Box>
       </Box>
     </>
