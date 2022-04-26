@@ -13,7 +13,6 @@
     "lint-fix": "next lint --fix"
   },
   "dependencies": {
-    "18": "0.0.0",
     "@emotion/cache": "^11.5.0",
     "@emotion/react": "^11.5.0",
     "@emotion/server": "^11.4.0",
@@ -28,7 +27,6 @@
     "formik": "^2.1.5",
     "history": "^5.0.0",
     "next": "^12.1.0",
-    "node": "^17.7.2",
     "nprogress": "^0.2.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
