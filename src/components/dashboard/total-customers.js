@@ -1,6 +1,8 @@
 import { Avatar, Box, Card, CardContent, Grid, Typography } from '@mui/material';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import DateRangeIcon from '@mui/icons-material/DateRange';
 import PeopleIcon from '@mui/icons-material/PeopleOutlined';
+import InterestRateAPI from 'src/API/interestRateAPI';
 
 export const TotalCustomers = (props) => (
   <Card {...props}>
@@ -16,13 +18,13 @@ export const TotalCustomers = (props) => (
             gutterBottom
             variant="overline"
           >
-            TOTAL CUSTOMERS
+            Average Interest Rate
           </Typography>
           <Typography
             color="textPrimary"
             variant="h4"
           >
-            1,6k
+            <InterestRateAPI displayData={"interestRate"}/>
           </Typography>
         </Grid>
         <Grid item>
@@ -44,20 +46,20 @@ export const TotalCustomers = (props) => (
           pt: 2
         }}
       >
-        <ArrowUpwardIcon color="success" />
+        <DateRangeIcon />
         <Typography
           variant="body2"
           sx={{
             mr: 1
           }}
         >
-          16%
+          <InterestRateAPI displayData={"recordDate"}/>
         </Typography>
         <Typography
           color="textSecondary"
           variant="caption"
         >
-          Since last month
+          Interest Rate Publish Date
         </Typography>
       </Box>
     </CardContent>
