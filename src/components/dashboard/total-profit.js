@@ -1,8 +1,13 @@
-import { Avatar, Card, CardContent, Grid, Typography } from '@mui/material';
+import { Avatar, Box, Card, CardContent, Grid, Typography } from '@mui/material';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import CashBalanceAPI from 'src/API/cashBalanceAPI';
+import DateRangeIcon from '@mui/icons-material/DateRange';
 
 export const TotalProfit = (props) => (
-  <Card {...props}>
+  <Card 
+      sx={{ height: '100%' }}
+    {...props}
+    >
     <CardContent>
       <Grid
         container
@@ -15,17 +20,20 @@ export const TotalProfit = (props) => (
             gutterBottom
             variant="overline"
           >
-            TOTAL PROFIT
+            US Treasury
+            <div>
+            Operating Cash Balance
+            </div>
           </Typography>
           <Typography
             color="textPrimary"
             variant="h4"
           >
-            $23k
+            <CashBalanceAPI displayData={"cashBalance"}/>
           </Typography>
         </Grid>
         <Grid item>
-          <Avatar
+          {/* <Avatar
             sx={{
               backgroundColor: 'primary.main',
               height: 56,
@@ -33,9 +41,40 @@ export const TotalProfit = (props) => (
             }}
           >
             <AttachMoneyIcon />
-          </Avatar>
+          </Avatar> */}
         </Grid>
       </Grid>
+      <Box
+        sx={{
+          alignItems: 'center',
+          display: 'flex',
+          pt: 3
+        }}
+      >
+        <Typography
+          color="textSecondary"
+          variant="caption"
+        >
+          Operating Cash Balance Publish Date
+        </Typography>
+        </Box>
+        <Box
+           sx={{
+            alignItems: 'center',
+            display: 'flex',
+            pt: 2
+          }}
+        >
+        <DateRangeIcon />
+        <Typography
+          variant="caption"
+          sx={{
+            mr: 1
+          }}
+        >
+          <CashBalanceAPI displayData={"recordDate"}/>
+        </Typography>
+     </Box>
     </CardContent>
   </Card>
 );

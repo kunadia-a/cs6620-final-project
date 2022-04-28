@@ -25,13 +25,13 @@ export const NationalDebt = (props) => (
           </Typography>
           <Typography
             color="textPrimary"
-            variant="h6"
+            variant="h4"
           >
         <Box
           sx={{
            alignItems: 'center',
             display: 'flex',
-            pt: 2
+            pt: 4
           }}
         >
           <NationalDebtAPI displayData={"nationalDebt"}/>
