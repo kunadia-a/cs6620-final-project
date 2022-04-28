@@ -21,6 +21,9 @@ export const NationalDebt = (props) => (
             gutterBottom
             variant="overline"
           >
+          <div>
+            US Treasury
+          </div>
             National Debt
           </Typography>
           <Typography
@@ -31,7 +34,7 @@ export const NationalDebt = (props) => (
           sx={{
            alignItems: 'center',
             display: 'flex',
-            pt: 4
+            pt: 0
           }}
         >
           <NationalDebtAPI displayData={"nationalDebt"}/>

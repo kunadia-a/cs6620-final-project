@@ -26,15 +26,7 @@ export const FederalFunds = (props) => (
             color="textPrimary"
             variant="h4"
           >
-        <Box
-          sx={{
-           alignItems: 'center',
-            display: 'flex',
-            pt: 4
-          }}
-        >
-          <FundsRateAPI displayData={"fundsRate"}/>
-          </Box>
+        <FundsRateAPI displayData={"fundsRate"}/>
           </Typography>
         </Grid>
         <Grid item>
@@ -53,7 +45,7 @@ export const FederalFunds = (props) => (
         sx={{
           alignItems: 'center',
           display: 'flex',
-          pt: 3
+          pt: 0
         }}
       >
         <Typography
