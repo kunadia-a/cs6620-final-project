@@ -29,10 +29,8 @@ const NationalDebtAPI = (props) => {
     }, []);
 
     if (nationalDebt.debt === undefined) {
-        console.log("Debt is undefined")
         return "loading...";
     } else {
-        console.log("Debt received");
         if (props.displayData === "nationalDebt") {
             let trillion = 1000000000000;
             let debtNumber = Number((nationalDebt.debt / trillion).toFixed(3));

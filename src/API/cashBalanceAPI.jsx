@@ -28,10 +28,8 @@ const CashBalanceAPI = (props) => {
     }, []);
 
     if (cashBalance.cash === undefined) {
-        console.log("Cash balance is undefined")
         return "loading...";
     } else {
-        console.log("Cash balance received");
         if (props.displayData === "cashBalance") {
             let thousand = 1000;
             let cashNumber = Number((cashBalance.cash / thousand).toFixed(3));

@@ -4,23 +4,14 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import MoneyIcon from '@mui/icons-material/Money';
 import StockAPI from 'src/API/stocksAPI';
 import { Search as SearchIcon } from '../../icons/search';
-// import StockSearchBar from '../StockSearchBar';
 
 export const Stocks = (props) => {
   const [stock, setStock] = useState();
-
-  console.log("THIS IS STOCK: ", stock);
-
-
-  // This will hopefully lag the user input....s
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
-      console.log("HERE HERE HERE!!!")
       if (stock === undefined || stock === '') {
         setStock('AMZN');
       }
-
-      // Send Axios request here
     }, 1000)
 
     return () => clearTimeout(delayDebounceFn)
@@ -28,7 +19,6 @@ export const Stocks = (props) => {
 
 
   const onInputChange = (e) => {
-    // setStock(e.target.value.toUpperCase());
     setStock(e.target.value.toUpperCase());
   }  
 

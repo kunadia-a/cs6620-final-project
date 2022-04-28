@@ -29,7 +29,6 @@ const FundsRateAPI = (props) => {
     }, []);
 
     if (fundsRate.rate === undefined) {
-        console.log("EFFR is undefined")
         return "loading...";
     } else {
         console.log("EFFR received");

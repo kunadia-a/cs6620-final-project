@@ -13,8 +13,6 @@ function DataChart() {
         year1: undefined,
         year2: undefined,
         year5: undefined,
-        // year10: undefined,
-        // year30: undefined,
     });
 
     const data = [
@@ -28,21 +26,11 @@ function DataChart() {
           yields: rates.year2,
           amt: 5,
         },
-        // {
-        //   name: '5 year',
-        //   yields: rates.year5,
-        //   amt: 5,
-        // },
         {
           name: '10 year',
           yields: rates.year10,
           amt: 5,
         },
-        // {
-        //   name: '30 year',
-        //   yields: rates.year30,
-        //   amt: 5,
-        // },
       ];
 
     function fetchInterestRate() {
@@ -51,13 +39,10 @@ function DataChart() {
           const rate = fetch(URL)
             .then((response) => response.json())
             .then((fiscalData) => {
-                console.log("YEAR1: ", rates.year1)
               setRates({
                   year1: fiscalData.data[0].avg_interest_rate_amt,
                   year2: fiscalData.data[5].avg_interest_rate_amt,
                   year10: fiscalData.data[2].avg_interest_rate_amt,
-                //   year10: fiscalData.data[3].avg_interest_rate_amt,
-                //   year30: fiscalData.data[19].avg_interest_rate_amt,
               });
             });
         } catch (error) {

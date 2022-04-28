@@ -45,11 +45,6 @@ const TreasuryRatesAPI = (props) => {
           const rate = fetch(url)
             .then((response) => response.json())
             .then((fiscalData) => {
-            //   setInterestRate({
-            //       investmentType: fiscalData.data[0].security_desc,
-            //       rate: fiscalData.data[0].avg_interest_rate_amt,
-            //       date: fiscalData.data[0].record_date
-            //   })
                 chooseInvestment(fiscalData);
             })
         } catch (error) {
@@ -62,10 +57,8 @@ const TreasuryRatesAPI = (props) => {
     }, []);
 
     if (interestRate.rate === undefined) {
-        console.log("Interest rate is undefined")
         return "loading...";
     } else {
-        console.log("interest rate received");
         if (props.displayData === "interestRate") {
             return (
                 <div>

@@ -50,8 +50,6 @@ const StockAPI = (stockTicker) => {
         );
     }
     else {
-        // 1.125 rem
-        // 2 rem
         return (
             <div style= {{paddingTop: paddingStyle}}>
                 <p>{stockLongName} ({stockSymbol})</p>

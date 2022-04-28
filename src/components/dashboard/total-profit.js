@@ -33,15 +33,6 @@ export const TotalProfit = (props) => (
           </Typography>
         </Grid>
         <Grid item>
-          {/* <Avatar
-            sx={{
-              backgroundColor: 'primary.main',
-              height: 56,
-              width: 56
-            }}
-          >
-            <AttachMoneyIcon />
-          </Avatar> */}
         </Grid>
       </Grid>
       <Box
