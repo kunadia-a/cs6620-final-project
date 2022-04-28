@@ -35,41 +35,24 @@ export const DashboardNavbar = (props) => {
           }}
         >
           <div>
-          <IconButton
-            onClick={onSidebarOpen}
-            sx={{
-              display: {
-                xs: 'inline-flex',
-                lg: 'none'
-              }
-            }}
-          >
-            <MenuIcon fontSize="small" />
-          </IconButton>
-          <Typography
-                    color="Black"
-                    variant="subtitle1"
-                  >
-                    CS 6620 Financial Dashboard
-                  </Typography> 
-                </div>
-          <Box sx={{ flexGrow: 1 }} />
-          <Tooltip title="Contacts">
-            <IconButton sx={{ ml: 1 }}>
-              <UsersIcon fontSize="small" />
+            <IconButton
+              onClick={onSidebarOpen}
+              sx={{
+                display: {
+                  xs: 'inline-flex',
+                  lg: 'none'
+                }
+              }}
+            >
+              <MenuIcon fontSize="small" />
             </IconButton>
-          </Tooltip>
-          <Tooltip title="Notifications">
-            <IconButton sx={{ ml: 1 }}>
-              <Badge
-                badgeContent={4}
-                color="primary"
-                variant="dot"
-              >
-                <BellIcon fontSize="small" />
-              </Badge>
-            </IconButton>
-          </Tooltip>
+            <Typography
+              color="Black"
+              variant="subtitle1"
+            >
+              CS 6620 Financial Dashboard
+            </Typography> 
+          </div>
         </Toolbar>
       </DashboardNavbarRoot>
     </>
