@@ -6,6 +6,7 @@ import { FederalFunds } from '../components/dashboard/federalFundsRate';
 import { TreasuryRates } from '../components/dashboard/TreasuryRates';
 import { TotalProfit } from '../components/dashboard/total-profit';
 import { DashboardLayout } from '../components/dashboard-layout';
+import Chart from 'src/components/dashboard/Chart';
 
 const Dashboard = () => (
   <>
@@ -100,7 +101,7 @@ const Dashboard = () => (
             xs={12}
           >
             <LatestProducts sx={{ height: '100%' }} />
-          </Grid>
+          </Grid> */}
           <Grid
             item
             lg={8}
@@ -108,8 +109,9 @@ const Dashboard = () => (
             xl={9}
             xs={12}
           >
-            <LatestOrders />
-          </Grid> */}
+            {/* <LatestOrders /> */}
+            < Chart/>
+          </Grid>
         </Grid>
       </Container>
     </Box>

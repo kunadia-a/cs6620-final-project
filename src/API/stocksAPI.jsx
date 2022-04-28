@@ -16,8 +16,8 @@ const StockAPI = (stockTicker) => {
     const APIKEY = "soCvVBKHIqa4w8UJXu7fS6g6Vf2dDJo03NAzuBcu";
 
     useEffect(() => {
-        var axios = require("axios").default;
-        var options = {
+        let axios = require("axios").default;
+        let options = {
             method: 'GET',
             url: URL,
             params: {
