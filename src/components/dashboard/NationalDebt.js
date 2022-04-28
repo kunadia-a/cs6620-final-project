@@ -1,66 +1,67 @@
-import { Avatar, Box, Card, CardContent, Grid, Typography } from '@mui/material';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import { Avatar, Box, Card, CardContent, Grid, LinearProgress, Typography } from '@mui/material';
+import InsertChartIcon from '@mui/icons-material/InsertChartOutlined';
+import NationalDebtAPI from 'src/API/nationalDebtAPI';
 import DateRangeIcon from '@mui/icons-material/DateRange';
-import PeopleIcon from '@mui/icons-material/PeopleOutlined';
-import InterestRateAPI from 'src/API/interestRateAPI';
-import TreasuryRatesAPI from 'src/API/treasuryRatesAPI';
 
-export const TotalCustomers = (props) => (
-  <Card 
+export const NationalDebt = (props) => (
+  <Card
     sx={{ height: '100%' }}
     {...props}
   >
-    {/* <CardContent>
+    <CardContent>
       <Grid
         container
         spacing={3}
         sx={{ justifyContent: 'space-between' }}
       >
         <Grid item>
+
           <Typography
             color="textSecondary"
             gutterBottom
             variant="overline"
           >
-            Average Interest Rate
+            National Debt
           </Typography>
           <Typography
             color="textPrimary"
-            variant="h4"
+            variant="h6"
           >
-            <InterestRateAPI displayData={"interestRate"}/>
+        <Box
+          sx={{
+           alignItems: 'center',
+            display: 'flex',
+            pt: 2
+          }}
+        >
+          <NationalDebtAPI displayData={"nationalDebt"}/>
+          </Box>
           </Typography>
         </Grid>
-        <Grid item> */}
-
-
-
+        <Grid item>
           {/* <Avatar
             sx={{
-              backgroundColor: 'success.main',
+              backgroundColor: 'warning.main',
               height: 56,
               width: 56
             }}
           >
-            <PeopleIcon />
+            <InsertChartIcon />
           </Avatar> */}
-
-
-
-        {/* </Grid>
+        </Grid>
       </Grid>
       <Box
         sx={{
           alignItems: 'center',
           display: 'flex',
-          pt: 2
+          pt: 3
         }}
       >
         <Typography
           color="textSecondary"
           variant="caption"
         >
-          Interest Rate Publish Date
+          National Debt Publish Date
         </Typography>
         </Box>
         <Box
@@ -77,23 +78,9 @@ export const TotalCustomers = (props) => (
             mr: 1
           }}
         >
-          <InterestRateAPI displayData={"recordDate"}/>
+          <NationalDebtAPI displayData={"recordDate"}/>
         </Typography>
      </Box>
-    </CardContent> */}
-    <TreasuryRatesAPI 
-      displayData={"interestRate"} 
-      fixedIncomeType={"3month"}
-    />
-
-    <TreasuryRatesAPI 
-      displayData={"interestRate"} 
-      fixedIncomeType={"2year"}
-    />
-
-    <TreasuryRatesAPI 
-      displayData={"interestRate"} 
-      fixedIncomeType={"10year"}
-    />
+    </CardContent>
   </Card>
 );

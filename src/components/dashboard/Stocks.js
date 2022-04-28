@@ -6,7 +6,7 @@ import StockAPI from 'src/API/stocksAPI';
 import { Search as SearchIcon } from '../../icons/search';
 // import StockSearchBar from '../StockSearchBar';
 
-export const Budget = (props) => {
+export const Stocks = (props) => {
   const [stock, setStock] = useState();
 
   console.log("THIS IS STOCK: ", stock);
@@ -30,52 +30,18 @@ export const Budget = (props) => {
   const onInputChange = (e) => {
     // setStock(e.target.value.toUpperCase());
     setStock(e.target.value.toUpperCase());
-  }
-
-  const searchBarUtil = () => {
-    return (
-      <div>
-        <Box sx={{ mt: 0 }}>
-              {/* Search in the bar to find a stock price */}
-              <Box sx={{ maxWidth: 600 }}>
-                <TextField
-                  fullWidth
-                  onChange={onInputChange}
-                  InputProps={{
-                    startAdornment: (
-                      <InputAdornment position="start">
-                        <SvgIcon
-                          color="action"
-                          fontSize="small"
-                        >
-                        <SearchIcon />
-                        </SvgIcon>
-                      </InputAdornment>
-                    )
-                  }}
-                  placeholder="Search stock"
-                  variant="outlined"
-                />
-              </Box>
-            </Box>
-          
-      </div>
-      
-    );
-  }
-
-  
+  }  
 
   return (
     <div>
       <Card
-    sx={{ height: '100%' }}
-    {...props}
-  >
+        sx={{ height:'100%' }}
+        {...props}
+      >
     <CardContent>
       <Grid
         container
-        spacing={3}
+        spacing={4}
         sx={{ justifyContent: 'space-between' }}
       >
         <Grid item>
@@ -98,8 +64,6 @@ export const Budget = (props) => {
             pt: 2
           }}
         >
-          
-          {/* <NationalDebtAPI displayData={"nationalDebt"}/> */}
           <Box sx={{ mt: 0 }}>
             {/* Search in the bar to find a stock price */}
               <Box sx={{ maxWidth: 600 }}>
@@ -127,17 +91,6 @@ export const Budget = (props) => {
           <StockAPI stockTicker={stock} />
           </Typography>
         </Grid>
-        <Grid item>
-          {/* <Avatar
-            sx={{
-              backgroundColor: 'warning.main',
-              height: 56,
-              width: 56
-            }}
-          >
-            <InsertChartIcon />
-          </Avatar> */}
-        </Grid>
       </Grid>
       <Box
         sx={{
@@ -146,30 +99,16 @@ export const Budget = (props) => {
           pt: 3
         }}
       >
-        <Typography
-          color="textSecondary"
-          variant="caption"
-        >
-          {/* National Debt Publish Date */}
-        </Typography>
         </Box>
         <Box
            sx={{
             alignItems: 'center',
             display: 'flex',
-            pt: 2
+            pt: 6
           }}
         >
-        {/* <DateRangeIcon /> */}
-        <Typography
-          variant="caption"
-          sx={{
-            mr: 1
-          }}
-        >
-          {/* <NationalDebtAPI displayData={"recordDate"}/> */}
-        </Typography>
-     </Box>
+      </Box>
+    
     </CardContent>
   </Card>
     </div>

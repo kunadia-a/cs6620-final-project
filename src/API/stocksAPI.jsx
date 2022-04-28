@@ -5,6 +5,8 @@ const StockAPI = (stockTicker) => {
     const [stockLongName, setStockName] = useState();
     const [stockSymbol, setStockSymbol] = useState();
 
+    const paddingStyle = '15px';
+
     const ticker = stockTicker.stockTicker;
     let v1 = 'https://yfapi.net/v6/finance/quote?region=US&lang=en&symbols='
     let v2 = ticker;
@@ -42,7 +44,7 @@ const StockAPI = (stockTicker) => {
 
     if (stockPrice === undefined) {
         return (
-            <div style= {{paddingTop: '15px'}}>
+            <div style= {{paddingTop: paddingStyle}}>
                 <p>Loading...</p>
             </div>
         );
@@ -51,7 +53,7 @@ const StockAPI = (stockTicker) => {
         // 1.125 rem
         // 2 rem
         return (
-            <div style= {{paddingTop: '15px'}}>
+            <div style= {{paddingTop: paddingStyle}}>
                 <p>{stockLongName} ({stockSymbol})</p>
                 <p style={{fontSize: '2rem'}}>${stockPrice}</p>
             </div>
