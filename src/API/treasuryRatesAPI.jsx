@@ -88,7 +88,7 @@ const TreasuryRatesAPI = (props) => {
                                     color="textPrimary"
                                     variant="h4"
                                 >
-                                    {interestRate.rate}
+                                    {interestRate.rate}{"%"}
                                 </Typography>
                             </Grid>
                             

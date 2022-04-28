@@ -1,5 +1,4 @@
 import {
-  Avatar,
   Box,
   Button,
   Card,
@@ -8,31 +7,12 @@ import {
   Divider,
   Typography
 } from '@mui/material';
+import AboutSectionContent from "src/components/account/aboutSectionContent"
 
-const user = {
-  avatar: '/static/images/avatars/avatar_6.png',
-  city: 'Los Angeles',
-  country: 'USA',
-  jobTitle: 'Senior Developer',
-  name: 'Katarina Smith',
-  timezone: 'GTM-7'
-};
-
-export const AccountProfile = (props) => (
+export const AboutPage = (props) => (
   <Card {...props}>
     <CardContent>
-      <div>
-      Christopher Holzheu
-      </div>
-      <div>
-      Ankita Kunadia
-      </div>
-      <div>
-      Katie Han
-      </div>
-      <div>
-      Chance Lamberth
-      </div>
+      <AboutSectionContent displayData={"groupMembers"}/>
       {/* <Box
         sx={{
           alignItems: 'center',
@@ -69,7 +49,6 @@ export const AccountProfile = (props) => (
         </Typography>
       </Box> */}
     </CardContent>
-    <Divider />
     <CardActions>
       {/* <Button
         color="primary"

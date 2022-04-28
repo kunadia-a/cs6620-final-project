@@ -20,27 +20,27 @@ function DataChart() {
     const data = [
         {
           name: '1 year',
-          yeilds: rates.year1,
+          yields: rates.year1,
           amt: 5,
         },
         {
           name: '2 year',
-          yeilds: rates.year2,
+          yields: rates.year2,
           amt: 5,
         },
         // {
         //   name: '5 year',
-        //   yeilds: rates.year5,
+        //   yields: rates.year5,
         //   amt: 5,
         // },
         {
           name: '10 year',
-          yeilds: rates.year10,
+          yields: rates.year10,
           amt: 5,
         },
         // {
         //   name: '30 year',
-        //   yeilds: rates.year30,
+        //   yields: rates.year30,
         //   amt: 5,
         // },
       ];
@@ -91,7 +91,7 @@ function DataChart() {
               <Tooltip />
               <Legend />
               <Line type="monotone"
-                dataKey="yeilds"
+                dataKey="yields"
                 stroke="#8884d8"
                 activeDot={{ r: 8 }} />
             </LineChart>
