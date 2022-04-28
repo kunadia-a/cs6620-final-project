@@ -1,5 +1,5 @@
 import { Box, Card, CardContent, Grid, Typography } from '@mui/material';
-import { FundsRateAPI } from 'src/API/fundsRateAPI';
+import FundsRateAPI from 'src/API/fundsRateAPI';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 
 export const FederalFunds = (props) => (
@@ -33,10 +33,20 @@ export const FederalFunds = (props) => (
             pt: 4
           }}
         >
-          {/* <FundsRateAPI displayData={"fundsRate"}/> */}
-          RATE
+          <FundsRateAPI displayData={"fundsRate"}/>
           </Box>
           </Typography>
+        </Grid>
+        <Grid item>
+          {/* <Avatar
+            sx={{
+              backgroundColor: 'warning.main',
+              height: 56,
+              width: 56
+            }}
+          >
+            <InsertChartIcon />
+          </Avatar> */}
         </Grid>
       </Grid>
       <Box
@@ -67,8 +77,7 @@ export const FederalFunds = (props) => (
             mr: 1
           }}
         >
-          {/* <FundsRateAPI displayData={"recordDate"}/> */}
-          DATE
+          <FundsRateAPI displayData={"recordDate"}/>
         </Typography>
      </Box>
     </CardContent>
