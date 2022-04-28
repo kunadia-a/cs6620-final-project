@@ -36,8 +36,28 @@ const Dashboard = () => (
             xl={3}
             xs={12}
           >
-            <Budget />
+            <Budget  sx={{ height: '60%' }} />
           </Grid>
+          
+          <Grid
+            item
+            xl={3}
+            lg={3}
+            sm={6}
+            xs={12}
+          >
+            <TasksProgress sx={{ height: '50%' }} />
+          </Grid>
+          <Grid
+            item
+            xl={3}
+            lg={3}
+            sm={6}
+            xs={12}
+          >
+            <TotalProfit sx={{ height: '50%' }} />
+          </Grid>
+
           <Grid
             item
             xl={3}
@@ -46,24 +66,6 @@ const Dashboard = () => (
             xs={12}
           >
             <TotalCustomers />
-          </Grid>
-          <Grid
-            item
-            xl={3}
-            lg={3}
-            sm={6}
-            xs={12}
-          >
-            <TasksProgress />
-          </Grid>
-          <Grid
-            item
-            xl={3}
-            lg={3}
-            sm={6}
-            xs={12}
-          >
-            <TotalProfit sx={{ height: '100%' }} />
           </Grid>
           {/* <Grid
             item

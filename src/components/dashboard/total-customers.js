@@ -3,12 +3,14 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 import PeopleIcon from '@mui/icons-material/PeopleOutlined';
 import InterestRateAPI from 'src/API/interestRateAPI';
+import TreasuryRatesAPI from 'src/API/treasuryRatesAPI';
 
 export const TotalCustomers = (props) => (
   <Card 
-  sx={{ height: '100%' }}
-  {...props}>
-    <CardContent>
+    sx={{ height: '100%' }}
+    {...props}
+  >
+    {/* <CardContent>
       <Grid
         container
         spacing={3}
@@ -29,7 +31,10 @@ export const TotalCustomers = (props) => (
             <InterestRateAPI displayData={"interestRate"}/>
           </Typography>
         </Grid>
-        <Grid item>
+        <Grid item> */}
+
+
+
           {/* <Avatar
             sx={{
               backgroundColor: 'success.main',
@@ -39,7 +44,10 @@ export const TotalCustomers = (props) => (
           >
             <PeopleIcon />
           </Avatar> */}
-        </Grid>
+
+
+
+        {/* </Grid>
       </Grid>
       <Box
         sx={{
@@ -72,6 +80,20 @@ export const TotalCustomers = (props) => (
           <InterestRateAPI displayData={"recordDate"}/>
         </Typography>
      </Box>
-    </CardContent>
+    </CardContent> */}
+    <TreasuryRatesAPI 
+      displayData={"interestRate"} 
+      fixedIncomeType={"3month"}
+    />
+
+    <TreasuryRatesAPI 
+      displayData={"interestRate"} 
+      fixedIncomeType={"2year"}
+    />
+
+    <TreasuryRatesAPI 
+      displayData={"interestRate"} 
+      fixedIncomeType={"10year"}
+    />
   </Card>
 );

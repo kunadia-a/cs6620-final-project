@@ -17,7 +17,7 @@ export const Budget = (props) => {
     const delayDebounceFn = setTimeout(() => {
       console.log("HERE HERE HERE!!!")
       if (stock === undefined || stock === '') {
-        setStock('VOO');
+        setStock('AMZN');
       }
 
       // Send Axios request here

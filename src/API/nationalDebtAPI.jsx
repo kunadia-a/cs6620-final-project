@@ -34,7 +34,9 @@ const NationalDebtAPI = (props) => {
     } else {
         console.log("Debt received");
         if (props.displayData === "nationalDebt") {
-            return "$" + nationalDebt.debt;
+            let trillion = 1000000000000;
+            let debtNumber = Number((nationalDebt.debt / trillion).toFixed(3));
+            return "$" + debtNumber + "T";
         }
         if (props.displayData === "recordDate") {
             return nationalDebt.date;
